@@ -1,0 +1,107 @@
+@mixin display($display: flex, $justify-content: center, $align-itmes: center) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-itmes;
+}
+body {
+  background-color: aliceblue;
+}
+
+.calculator-section {
+  //main section
+  @include display();
+  margin: 50px auto;
+  max-width: 41%;
+  border: 1px solid grey;
+  // background: linear-gradient(to bottom left, #9897a9, #41424c 30%, grey 100%);
+  background-color: black;
+  box-shadow: 0 0 30px gray;
+  border-radius: 10px;
+
+  .title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+    padding-top: 20px;
+    color: whitesmoke;
+    text-transform: uppercase;
+  }
+
+  //displaying
+  .upside {
+    border: 1px solid;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 35px;
+
+    input {
+      color: #333;
+      // background: linear-gradient(to left top, grey 40%, lightgray 60%);
+      background-color: white;
+      text-align: center;
+      font-size: 45px;
+    }
+  }
+
+  //keys
+  .downside {
+    ul {
+      @include display(flex, space-evenly);
+      font-size: 33px;
+      font-weight: 600;
+      flex-wrap: wrap;
+
+      li,
+      p {
+        width: 18%;
+        margin: 15px 0;
+        text-align: center;
+        padding: 18px 1px;
+        cursor: pointer;
+        background-color: gray;
+        color: whitesmoke;
+        border-radius: 20%;
+
+        &.empty {
+          background-color: unset;
+          cursor: auto;
+
+          &:hover {
+            opacity: 1;
+            box-shadow: none;
+          }
+        }
+
+        &.ac {
+          background-color: red;
+          margin: 0;
+          padding: 0;
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+
+        &.equal {
+          border-radius: 20px;
+          color: black;
+          background-color: darkgray;
+        }
+
+        &.op {
+          background-color: #ff8819;
+
+          &:hover {
+            opacity: 0.7;
+            box-shadow: 0px 0px 30px #ff8819ad;
+          }
+        }
+
+        &:hover {
+          opacity: 0.8;
+          box-shadow: 0px 0px 15px darkgray;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+body {
+  background-color: aliceblue;
+}
+
+.calculator-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  max-width: 41%;
+  border: 1px solid grey;
+  background-color: black;
+  box-shadow: 0 0 30px gray;
+  border-radius: 10px;
+}
+.calculator-section .title {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 800;
+  padding-top: 20px;
+  color: whitesmoke;
+  text-transform: uppercase;
+}
+.calculator-section .upside {
+  border: 1px solid;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 35px;
+}
+.calculator-section .upside input {
+  color: #333;
+  background-color: white;
+  text-align: center;
+  font-size: 45px;
+}
+.calculator-section .downside ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 33px;
+  font-weight: 600;
+  flex-wrap: wrap;
+}
+.calculator-section .downside ul li,
+.calculator-section .downside ul p {
+  width: 18%;
+  margin: 15px 0;
+  text-align: center;
+  padding: 18px 1px;
+  cursor: pointer;
+  background-color: gray;
+  color: whitesmoke;
+  border-radius: 20%;
+}
+.calculator-section .downside ul li.empty,
+.calculator-section .downside ul p.empty {
+  background-color: unset;
+  cursor: auto;
+}
+.calculator-section .downside ul li.empty:hover,
+.calculator-section .downside ul p.empty:hover {
+  opacity: 1;
+  box-shadow: none;
+}
+.calculator-section .downside ul li.ac,
+.calculator-section .downside ul p.ac {
+  background-color: red;
+  margin: 0;
+  padding: 0;
+}
+.calculator-section .downside ul li.ac:hover,
+.calculator-section .downside ul p.ac:hover {
+  opacity: 0.5;
+}
+.calculator-section .downside ul li.equal,
+.calculator-section .downside ul p.equal {
+  border-radius: 20px;
+  color: black;
+  background-color: darkgray;
+}
+.calculator-section .downside ul li.op,
+.calculator-section .downside ul p.op {
+  background-color: #ff8819;
+}
+.calculator-section .downside ul li.op:hover,
+.calculator-section .downside ul p.op:hover {
+  opacity: 0.7;
+  box-shadow: 0px 0px 30px rgba(255, 136, 25, 0.6784313725);
+}
+.calculator-section .downside ul li:hover,
+.calculator-section .downside ul p:hover {
+  opacity: 0.8;
+  box-shadow: 0px 0px 15px darkgray;
+}/*# sourceMappingURL=index.css.map */
